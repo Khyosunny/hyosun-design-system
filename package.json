@@ -2,7 +2,7 @@
   "name": "hyosun-design-system",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
@@ -21,7 +21,7 @@
     "babel-preset-react-app": "^10.0.0",
     "typescript": "^4.4.4"
   },
-  "peerDependencies": {
+  "dependencies": {
     "@emotion/babel-preset-css-prop": "^11.2.0",
     "@emotion/react": "^11.5.0",
     "@emotion/styled": "^11.3.0",

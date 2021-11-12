@@ -7,17 +7,13 @@ module.exports = {
   webpackFinal: async (config) => {
     config.module.rules.push({
       test: /\.(ts|tsx)$/,
-      use: [
-        {
-          loader: require.resolve('babel-loader'),
-          options: {
-            presets: [
-              ['react-app', { flow: false, typescript: true }],
-              require.resolve('@emotion/babel-preset-css-prop'),
-            ],
-          },
-        },
-      ],
+      loader: require.resolve('babel-loader'),
+      options: {
+        presets: [
+          ['react-app', { flow: false, typescript: true }],
+          require.resolve('@emotion/babel-preset-css-prop'),
+        ],
+      },
     });
     config.resolve.extensions.push('.ts', '.tsx');
     config.resolve.alias = {
