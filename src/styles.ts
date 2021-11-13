@@ -30,3 +30,22 @@ export enum EColors {
   green_40 = '#ADF1DD',
   green_20 = '#D7F5EA',
 }
+
+export enum EFontSizes {
+  h1 = '4.8rem',
+  h2 = '3.6rem',
+  h3 = '2.4rem',
+  h4 = '2.2rem',
+  h5 = '2rem',
+  body_1 = '1.8rem',
+  body_2 = '1.6rem',
+  body_3 = '1.4rem',
+  body_4 = '1.2rem',
+}
+
+export enum EFontWeight {
+  light = 300,
+  regular = 400,
+  medium = 500,
+  bold = 700,
+}

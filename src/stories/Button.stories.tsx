@@ -1,4 +1,3 @@
-import React from 'react';
 import Button from '../components/Button';
 
 export default {
@@ -6,7 +5,7 @@ export default {
   component: Button,
 };
 
-export const Default = () => <Button disabled>BUTTON</Button>;
+export const Default = () => <Button>BUTTON</Button>;
 
 // export const Default = Template.bind({});
 // Primary.args = {
