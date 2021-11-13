@@ -1,15 +1,13 @@
 import { ButtonHTMLAttributes, ReactNode, forwardRef } from 'react';
 import styled from '@emotion/styled';
-
-type Sizes = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
-
-export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+import { TSizes } from '../..';
+export interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
-  size?: Sizes;
+  size?: TSizes;
   fullWidth?: boolean;
 }
 
-const Button = forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {
+const Button = forwardRef<HTMLButtonElement, IButtonProps>((props, ref) => {
   const { children, size = 'sm', disabled, fullWidth, ...restProps } = props;
   return (
     <ButtonElement
@@ -24,8 +22,8 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {
   );
 });
 
-const ButtonElement = styled.button<ButtonProps>`
-  ${(props) => sizeStyles[props.size as Sizes]}
+const ButtonElement = styled.button<IButtonProps>`
+  ${(props) => sizeStyles[props.size as TSizes]}
   ${(props) => props.disabled && `cursor: not-allowed`}
   ${(props) => props.fullWidth && `width: 100%`}
 `;
