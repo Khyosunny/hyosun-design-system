@@ -35,58 +35,68 @@ const Button = forwardRef<HTMLButtonElement, IButtonProps>((props, ref) => {
 });
 
 const ButtonElement = styled.button<IButtonProps>`
-  ${(props) => props.size && sizeStyles[props.size]};
-  ${(props) => props.color && colorStyles[props.color]};
+  ${(props) =>
+    props.size === 'xl' &&
+    `
+      height: 48px;
+      padding: 0 35px;
+      font-size: ${EFontSizes.body_1};
+      border-radius: 6px;
+    `};
+
+  ${(props) =>
+    props.size === 'lg' &&
+    `
+      height: 40px;
+      padding: 0 28px;
+      font-size: ${EFontSizes.body_2};
+      border-radius: 6px;
+    `};
+
+  ${(props) =>
+    props.size === 'md' &&
+    `
+      height: 36px;
+      padding: 0 20px;
+      font-size: ${EFontSizes.body_2};
+      border-radius: 6px;
+    `};
+
+  ${(props) =>
+    props.size === 'sm' &&
+    `
+      height: 32px;
+      padding: 0 18px;
+      font-size: ${EFontSizes.body_2};
+      border-radius: 6px;
+    `};
+
+  ${(props) =>
+    props.size === 'xs' &&
+    `
+      height: 28px;
+      padding: 0 12px;
+      font-size: ${EFontSizes.body_4};
+      border-radius: 4px;
+    `};
+
+  ${(props) =>
+    props.color === 'blue' &&
+    `
+      color: ${EColors.white};
+      background: ${EColors.blue_80};
+      &:hover {
+        background: ${EColors.blue_90};
+      }
+      &:active {
+        background: ${EColors.blue_100};
+      }
+    `};
+
   ${(props) => props.disabled && `cursor: not-allowed`};
   ${(props) => props.fullWidth && `width: 100%`};
   font-weight: ${EFontWeight.medium};
   transition: 100ms ease-out;
 `;
-
-const sizeStyles = {
-  xs: `
-    height: 28px;
-    padding: 0 12px;
-    font-size: ${EFontSizes.body_4};
-    border-radius: 4px;
-  `,
-  sm: `
-    height: 32px;
-    padding: 0 18px;
-    font-size: ${EFontSizes.body_2};
-    border-radius: 6px;
-  `,
-  md: `
-    height: 36px;
-    padding: 0 20px;
-    font-size: ${EFontSizes.body_2};
-    border-radius: 6px;
-  `,
-  lg: `
-    height: 40px;
-    padding: 0 28px;
-    font-size: ${EFontSizes.body_2};
-    border-radius: 6px;
-  `,
-  xl: `
-    height: 48px;
-    padding: 0 35px;
-    font-size: ${EFontSizes.body_1};
-    border-radius: 6px;
-  `,
-};
-
-const colorStyles = {
-  blue: `
-    color: ${EColors.white};
-    background: ${EColors.blue_80};
-    &:hover {
-      background: ${EColors.blue_90};
-    }
-    &:active {
-      background: ${EColors.blue_100};
-    }
-  `,
-};
 
 export default Button;
