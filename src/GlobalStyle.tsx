@@ -94,8 +94,13 @@ const GlobalStyle = () => (
         vertical-align: baseline;
         box-sizing: border-box;
       }
-      body {
-        line-height: 1;
+      html {
+        font-size: 62.5%;
+        font-family: 'Noto Sans KR', 'sans-serif';
+        body {
+          line-height: 1;
+          font-size: 1.6rem;
+        }
       }
       ol,
       ul {
