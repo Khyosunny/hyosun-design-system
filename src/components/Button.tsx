@@ -22,6 +22,7 @@ const Button = forwardRef<HTMLButtonElement, IButtonProps>((props, ref) => {
   } = props;
   return (
     <ButtonElement
+      variant={variant}
       size={size}
       color={color}
       disabled={disabled}
@@ -81,7 +82,9 @@ const ButtonElement = styled.button<IButtonProps>`
     `};
 
   ${(props) =>
+    props.variant === 'default' &&
     props.color === 'blue' &&
+    !props.disabled &&
     `
       color: ${EColors.white};
       background: ${EColors.blue_80};
@@ -91,6 +94,14 @@ const ButtonElement = styled.button<IButtonProps>`
       &:active {
         background: ${EColors.blue_100};
       }
+    `};
+
+  ${(props) =>
+    props.variant === 'default' &&
+    props.disabled &&
+    `
+      color: ${EColors.black_40};
+      background: ${EColors.gray_80};
     `};
 
   ${(props) => props.disabled && `cursor: not-allowed`};

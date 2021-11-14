@@ -6,6 +6,7 @@ export default {
 };
 
 export const Default = () => <Button label="BUTTON" />;
+export const Disabled = () => <Button label="BUTTON" disabled />;
 
 // export const Default = Template.bind({});
 // Primary.args = {
