@@ -28,6 +28,12 @@ export const Disabled = () => (
   </div>
 );
 
+export const FullWidth = () => (
+  <div style={{ display: 'flex', alignItems: 'flex-end', columnGap: 10 }}>
+    <Button label="BUTTON" fullWidth />
+  </div>
+);
+
 // export const Default = Template.bind({});
 // Primary.args = {
 //   primary: true,
