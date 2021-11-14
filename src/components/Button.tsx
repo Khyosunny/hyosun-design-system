@@ -42,7 +42,7 @@ const ButtonElement = styled.button<IButtonProps>`
       height: 48px;
       padding: 0 35px;
       font-size: ${EFontSizes.body_1};
-      border-radius: 6px;
+      border-radius: 8px;
     `};
 
   ${(props) =>
@@ -59,7 +59,7 @@ const ButtonElement = styled.button<IButtonProps>`
     `
       height: 36px;
       padding: 0 20px;
-      font-size: ${EFontSizes.body_2};
+      font-size: ${EFontSizes.body_3};
       border-radius: 6px;
     `};
 
@@ -68,7 +68,7 @@ const ButtonElement = styled.button<IButtonProps>`
     `
       height: 32px;
       padding: 0 18px;
-      font-size: ${EFontSizes.body_2};
+      font-size: ${EFontSizes.body_3};
       border-radius: 6px;
     `};
 
