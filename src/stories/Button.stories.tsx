@@ -7,6 +7,7 @@ export default {
 };
 
 export const Default = () => <Button label="BUTTON" />;
+
 export const Size = () => (
   <div style={{ display: 'flex', alignItems: 'flex-end', columnGap: 10 }}>
     <Button size="xl" label="xl" />
@@ -16,7 +17,16 @@ export const Size = () => (
     <Button size="xs" label="xs" />
   </div>
 );
-export const Disabled = () => <Button label="BUTTON" disabled />;
+
+export const Disabled = () => (
+  <div style={{ display: 'flex', alignItems: 'flex-end', columnGap: 10 }}>
+    <Button size="xl" label="xl" disabled />
+    <Button size="lg" label="lg" disabled />
+    <Button size="md" label="md" disabled />
+    <Button size="sm" label="sm" disabled />
+    <Button size="xs" label="xs" disabled />
+  </div>
+);
 
 // export const Default = Template.bind({});
 // Primary.args = {
