@@ -3,19 +3,19 @@ import styled from '@emotion/styled';
 import { EColors, EFontSizes, EFontWeight } from '../styles';
 import { TButtonSizes } from '../..';
 export interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  children: ReactNode;
   variant?: 'default' | 'outlined';
   size?: TButtonSizes;
   color?: 'blue';
+  label?: string;
   fullWidth?: boolean;
 }
 
 const Button = forwardRef<HTMLButtonElement, IButtonProps>((props, ref) => {
   const {
-    children,
     variant = 'default',
     size = 'lg',
     color = 'blue',
+    label,
     disabled,
     fullWidth,
     ...restProps
@@ -29,7 +29,7 @@ const Button = forwardRef<HTMLButtonElement, IButtonProps>((props, ref) => {
       ref={ref}
       {...restProps}
     >
-      {children}
+      {label}
     </ButtonElement>
   );
 });

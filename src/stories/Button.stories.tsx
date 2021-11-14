@@ -5,7 +5,7 @@ export default {
   component: Button,
 };
 
-export const Default = () => <Button>BUTTON</Button>;
+export const Default = () => <Button label="BUTTON" />;
 
 // export const Default = Template.bind({});
 // Primary.args = {
