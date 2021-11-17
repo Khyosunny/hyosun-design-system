@@ -3,6 +3,7 @@ import { Global, css } from '@emotion/react';
 const GlobalStyle = () => (
   <Global
     styles={css`
+      @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
       html,
       body,
       div,
