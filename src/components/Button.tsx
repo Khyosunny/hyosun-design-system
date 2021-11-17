@@ -39,8 +39,8 @@ const ButtonElement = styled.button<IButtonProps>`
   ${(props) =>
     props.size === 'xl' &&
     `
-      height: 48px;
-      padding: 0 35px;
+      height: 46px;
+      padding: 0 24px;
       font-size: ${EFontSizes.body_1};
       border-radius: 8px;
     `};
@@ -49,7 +49,7 @@ const ButtonElement = styled.button<IButtonProps>`
     props.size === 'lg' &&
     `
       height: 40px;
-      padding: 0 28px;
+      padding: 0 18px;
       font-size: ${EFontSizes.body_2};
       border-radius: 6px;
     `};
@@ -58,7 +58,7 @@ const ButtonElement = styled.button<IButtonProps>`
     props.size === 'md' &&
     `
       height: 36px;
-      padding: 0 20px;
+      padding: 0 14px;
       font-size: ${EFontSizes.body_3};
       border-radius: 6px;
     `};
@@ -67,7 +67,7 @@ const ButtonElement = styled.button<IButtonProps>`
     props.size === 'sm' &&
     `
       height: 32px;
-      padding: 0 18px;
+      padding: 0 10px;
       font-size: ${EFontSizes.body_3};
       border-radius: 6px;
     `};
@@ -76,7 +76,7 @@ const ButtonElement = styled.button<IButtonProps>`
     props.size === 'xs' &&
     `
       height: 28px;
-      padding: 0 12px;
+      padding: 0 8px;
       font-size: ${EFontSizes.body_4};
       border-radius: 4px;
     `};

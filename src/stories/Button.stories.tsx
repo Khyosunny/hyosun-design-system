@@ -10,27 +10,27 @@ export const Default = () => <Button label="BUTTON" />;
 
 export const Size = () => (
   <div style={{ display: 'flex', alignItems: 'flex-end', columnGap: 10 }}>
-    <Button size="xl" label="xl" />
-    <Button size="lg" label="lg" />
-    <Button size="md" label="md" />
-    <Button size="sm" label="sm" />
-    <Button size="xs" label="xs" />
+    <Button size="xl" label="버튼" />
+    <Button size="lg" label="버튼" />
+    <Button size="md" label="버튼" />
+    <Button size="sm" label="버튼" />
+    <Button size="xs" label="버튼" />
   </div>
 );
 
 export const Disabled = () => (
   <div style={{ display: 'flex', alignItems: 'flex-end', columnGap: 10 }}>
-    <Button size="xl" label="xl" disabled />
-    <Button size="lg" label="lg" disabled />
-    <Button size="md" label="md" disabled />
-    <Button size="sm" label="sm" disabled />
-    <Button size="xs" label="xs" disabled />
+    <Button size="xl" label="버튼" disabled />
+    <Button size="lg" label="버튼" disabled />
+    <Button size="md" label="버튼" disabled />
+    <Button size="sm" label="버튼" disabled />
+    <Button size="xs" label="버튼" disabled />
   </div>
 );
 
 export const FullWidth = () => (
   <div style={{ display: 'flex', alignItems: 'flex-end', columnGap: 10 }}>
-    <Button label="BUTTON" fullWidth />
+    <Button label="버튼" fullWidth />
   </div>
 );
 
