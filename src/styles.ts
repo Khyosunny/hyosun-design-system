@@ -7,7 +7,9 @@ export enum EColors {
   blue_40 = '#B1DAFF',
 
   black_100 = '#101010',
-  black_80 = '#5E5E5E',
+  black_90 = '#383838',
+  black_80 = '#4F4F4F',
+  black_70 = '#5E5E5E',
   black_60 = '#A5A5A5',
   black_40 = '#C7C7C7',
 
