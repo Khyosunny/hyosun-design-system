@@ -1,11 +1,11 @@
 import { ButtonHTMLAttributes, ReactNode, forwardRef } from 'react';
 import styled from '@emotion/styled';
 import { EColors, EFontSizes, EFontWeight } from '../styles';
-import { TButtonSizes, TButtonVariant } from '../..';
+import { TButtonColor, TButtonSizes, TButtonVariant } from '../..';
 export interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: TButtonVariant;
   size?: TButtonSizes;
-  color?: 'blue';
+  color?: TButtonColor;
   label?: string;
   fullWidth?: boolean;
 }
@@ -93,6 +93,21 @@ const ButtonElement = styled.button<IButtonProps>`
       }
       &:active {
         background: ${EColors.blue_100};
+      }
+    `};
+
+  ${(props) =>
+    props.variant === 'default' &&
+    props.color === 'black' &&
+    !props.disabled &&
+    `
+      color: ${EColors.white};
+      background: ${EColors.black_80};
+      &:hover {
+        background: ${EColors.black_90};
+      }
+      &:active {
+        background: ${EColors.black_100};
       }
     `};
 

@@ -3,3 +3,4 @@ export { default as Button } from './components/Button';
 
 export type TButtonSizes = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 export type TButtonVariant = 'default' | 'outlined';
+export type TButtonColor = 'blue' | 'black';

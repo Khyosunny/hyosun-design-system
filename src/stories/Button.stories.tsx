@@ -18,6 +18,13 @@ export const Size = () => (
   </div>
 );
 
+export const Color = () => (
+  <div style={{ display: 'flex', alignItems: 'flex-end', columnGap: 10 }}>
+    <Button size="lg" label="버튼" color="blue" />
+    <Button size="lg" label="버튼" color="black" />
+  </div>
+);
+
 export const Disabled = () => (
   <div style={{ display: 'flex', alignItems: 'flex-end', columnGap: 10 }}>
     <Button size="xl" label="버튼" disabled />
