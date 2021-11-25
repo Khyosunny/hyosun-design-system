@@ -39,10 +39,10 @@ export enum EFontSizes {
   h3 = '2.4rem',
   h4 = '2.2rem',
   h5 = '2rem',
-  body_1 = '1.8rem',
-  body_2 = '1.6rem',
-  body_3 = '1.4rem',
-  body_4 = '1.2rem',
+  body1 = '1.8rem',
+  body2 = '1.6rem',
+  body3 = '1.4rem',
+  body4 = '1.2rem',
 }
 
 export enum EFontWeight {

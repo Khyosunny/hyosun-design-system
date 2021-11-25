@@ -41,7 +41,7 @@ const ButtonElement = styled.button<IButtonProps>`
     `
       height: 46px;
       padding: 0 24px;
-      font-size: ${EFontSizes.body_1};
+      font-size: ${EFontSizes.body1};
       border-radius: 8px;
     `};
 
@@ -50,7 +50,7 @@ const ButtonElement = styled.button<IButtonProps>`
     `
       height: 40px;
       padding: 0 18px;
-      font-size: ${EFontSizes.body_2};
+      font-size: ${EFontSizes.body2};
       border-radius: 6px;
     `};
 
@@ -59,7 +59,7 @@ const ButtonElement = styled.button<IButtonProps>`
     `
       height: 36px;
       padding: 0 14px;
-      font-size: ${EFontSizes.body_3};
+      font-size: ${EFontSizes.body3};
       border-radius: 6px;
     `};
 
@@ -68,7 +68,7 @@ const ButtonElement = styled.button<IButtonProps>`
     `
       height: 32px;
       padding: 0 10px;
-      font-size: ${EFontSizes.body_3};
+      font-size: ${EFontSizes.body3};
       border-radius: 6px;
     `};
 
@@ -77,7 +77,7 @@ const ButtonElement = styled.button<IButtonProps>`
     `
       height: 28px;
       padding: 0 8px;
-      font-size: ${EFontSizes.body_4};
+      font-size: ${EFontSizes.body4};
       border-radius: 4px;
     `};
 
