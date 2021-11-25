@@ -1,7 +1,7 @@
 import { ButtonHTMLAttributes, ReactNode, forwardRef } from 'react';
 import styled from '@emotion/styled';
 import { EColors, EFontSizes, EFontWeight } from '../styles';
-import { TButtonColor, TButtonSizes, TButtonVariant } from '../..';
+import { TButtonColor, TButtonSizes, TButtonVariant } from '..';
 export interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: TButtonVariant;
   size?: TButtonSizes;
