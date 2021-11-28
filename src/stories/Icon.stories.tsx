@@ -7,9 +7,25 @@ export default {
   component: Icon,
 };
 
-export const Default = () => (
-  <>
-    <Icon icon="radio_unchecked" />
-    <Icon icon="radio_checked" />
-  </>
-);
+export const Default = () => {
+  const IconsPreview = ({ iconName }: any) => (
+    <div
+      style={{
+        display: 'inline-flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        gap: 10,
+        margin: 10,
+      }}
+    >
+      <Icon icon={iconName} size={40} />
+      <p style={{ fontSize: 12 }}>{iconName}</p>
+    </div>
+  );
+  return (
+    <>
+      <IconsPreview iconName="radioUnchecked" />
+      <IconsPreview iconName="radioChecked" />
+    </>
+  );
+};
