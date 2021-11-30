@@ -14,8 +14,10 @@ export const Default = () => {
         display: 'inline-flex',
         flexDirection: 'column',
         alignItems: 'center',
+        flexWrap: 'wrap',
         gap: 10,
         margin: 10,
+        minWidth: 120,
       }}
     >
       <Icon icon={iconName} size={40} />
@@ -26,6 +28,16 @@ export const Default = () => {
     <>
       <IconsPreview iconName="radioUnchecked" />
       <IconsPreview iconName="radioChecked" />
+      <IconsPreview iconName="checkBox" />
+      <IconsPreview iconName="checkBoxBlank" />
+      <IconsPreview iconName="fileCopy" />
+      <IconsPreview iconName="link" />
+      <IconsPreview iconName="person" />
+      <IconsPreview iconName="moreVert" />
+      <IconsPreview iconName="arrowDown" />
+      <IconsPreview iconName="arrowUp" />
+      <IconsPreview iconName="visibility" />
+      <IconsPreview iconName="visibilityOff" />
     </>
   );
 };
