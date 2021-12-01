@@ -6,4 +6,9 @@ export default {
   component: Tag,
 };
 
-export const Default = () => <Tag label="진행중" color="green" />;
+export const Default = () => (
+  <div style={{ display: 'flex', gap: 10 }}>
+    <Tag label="진행중" color="green" />
+    <Tag label="마감" color="red" />
+  </div>
+);
