@@ -38,6 +38,7 @@ export const Default = () => {
       <IconsPreview iconName="arrowUp" />
       <IconsPreview iconName="visibility" />
       <IconsPreview iconName="visibilityOff" />
+      <IconsPreview iconName="add" />
     </>
   );
 };
