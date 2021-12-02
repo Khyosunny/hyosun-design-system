@@ -1,4 +1,4 @@
-import { ButtonHTMLAttributes, ReactNode, forwardRef } from 'react';
+import { ButtonHTMLAttributes, forwardRef } from 'react';
 import styled from '@emotion/styled';
 import { EColors, EFontSizes, EFontWeight } from '../styles';
 import { TButtonColor, TButtonSize, TButtonVariant } from '..';
