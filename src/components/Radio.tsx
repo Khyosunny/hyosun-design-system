@@ -1,6 +1,5 @@
-import React, { FunctionComponent, HTMLAttributes } from 'react';
+import { FunctionComponent, HTMLAttributes } from 'react';
 import styled from '@emotion/styled';
-import Icon from './Icon/Icon';
 import { TFontSize } from '..';
 import { EColors } from '../styles';
 import Text from './Text';
