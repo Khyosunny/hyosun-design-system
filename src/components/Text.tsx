@@ -18,59 +18,80 @@ const Text: FunctionComponent<ITextProps> = (props) => {
     textColor = EColors.black_100,
     weight = 'regular',
     align = 'start',
+    ...restProps
   } = props;
   switch (variant) {
     case 'h1':
       return (
-        <H1 style={{ color: textColor }} align={align}>
+        <H1 style={{ color: textColor }} align={align} {...restProps}>
           {children}
         </H1>
       );
     case 'h2':
       return (
-        <H2 style={{ color: textColor }} align={align}>
+        <H2 style={{ color: textColor }} align={align} {...restProps}>
           {children}
         </H2>
       );
     case 'h3':
       return (
-        <H3 style={{ color: textColor }} align={align}>
+        <H3 style={{ color: textColor }} align={align} {...restProps}>
           {children}
         </H3>
       );
     case 'h4':
       return (
-        <H4 style={{ color: textColor }} align={align}>
+        <H4 style={{ color: textColor }} align={align} {...restProps}>
           {children}
         </H4>
       );
     case 'h5':
       return (
-        <H5 style={{ color: textColor }} align={align}>
+        <H5 style={{ color: textColor }} align={align} {...restProps}>
           {children}
         </H5>
       );
     case 'body1':
       return (
-        <Body1 style={{ color: textColor }} weight={weight} align={align}>
+        <Body1
+          style={{ color: textColor }}
+          weight={weight}
+          align={align}
+          {...restProps}
+        >
           {children}
         </Body1>
       );
     case 'body2':
       return (
-        <Body2 style={{ color: textColor }} weight={weight} align={align}>
+        <Body2
+          style={{ color: textColor }}
+          weight={weight}
+          align={align}
+          {...restProps}
+        >
           {children}
         </Body2>
       );
     case 'body3':
       return (
-        <Body3 style={{ color: textColor }} weight={weight} align={align}>
+        <Body3
+          style={{ color: textColor }}
+          weight={weight}
+          align={align}
+          {...restProps}
+        >
           {children}
         </Body3>
       );
     case 'body4':
       return (
-        <Body4 style={{ color: textColor }} weight={weight} align={align}>
+        <Body4
+          style={{ color: textColor }}
+          weight={weight}
+          align={align}
+          {...restProps}
+        >
           {children}
         </Body4>
       );
