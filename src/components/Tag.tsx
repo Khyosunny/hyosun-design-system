@@ -1,35 +1,16 @@
 import { FunctionComponent } from 'react';
 import styled from '@emotion/styled';
-import Text from './Text';
-import { EColors } from '../styles';
+import { EColors, EFontSizes } from '../styles';
 
 interface ITagProps {
   label?: string;
   color?: 'green' | 'red';
 }
 
-function getTagTextColor(color?: 'green' | 'red') {
-  switch (color) {
-    case 'green':
-      return EColors.green_100;
-    case 'red':
-      return EColors.red_60;
-
-    default:
-      return EColors.green_100;
-  }
-}
-
 const Tag: FunctionComponent<ITagProps> = (props) => {
   const { label, color } = props;
 
-  return (
-    <TagElement color={color}>
-      <Text variant="body3" textColor={getTagTextColor(color)}>
-        {label}
-      </Text>
-    </TagElement>
-  );
+  return <TagElement color={color}>{label}</TagElement>;
 };
 
 const TagElement = styled.div<ITagProps>`
@@ -39,18 +20,20 @@ const TagElement = styled.div<ITagProps>`
   padding: 0 8px 2px;
   height: 20px;
   border-radius: 4px;
-  cursor: default;
+  font-size: ${EFontSizes.body3};
 
   ${(props) =>
     props.color === 'green' &&
     `
     background: ${EColors.green_20};
+    color: ${EColors.green_100};
     `};
 
   ${(props) =>
     props.color === 'red' &&
     `
     background: ${EColors.pink_20};
+    color: ${EColors.red_60};
     `};
 `;
 
