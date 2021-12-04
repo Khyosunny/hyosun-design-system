@@ -10,7 +10,8 @@ export const Default = () => {
   const [selected, setSelected] = useState(false);
 
   return (
-    <div style={{ display: 'flex', gap: 10 }}>
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+      <Radio selected={selected} onClick={() => setSelected(!selected)} />
       <Radio
         label="라디오"
         selected={selected}
