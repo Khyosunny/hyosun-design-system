@@ -39,6 +39,7 @@ export const Default = () => {
       <IconsPreview iconName="visibility" />
       <IconsPreview iconName="visibilityOff" />
       <IconsPreview iconName="add" />
+      <IconsPreview iconName="miniCheck" />
     </>
   );
 };
