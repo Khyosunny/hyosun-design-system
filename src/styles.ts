@@ -31,6 +31,8 @@ export enum EColors {
   green_60 = '#61D2B7',
   green_40 = '#ADF1DD',
   green_20 = '#D7F5EA',
+
+  transparent = 'transparent',
 }
 
 export enum EFontSizes {

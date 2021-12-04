@@ -2,61 +2,50 @@ import { FunctionComponent, HTMLAttributes } from 'react';
 import styled from '@emotion/styled';
 import { TFontSize } from '..';
 import { EColors } from '../styles';
+import Icon from './Icon/Icon';
 import Text from './Text';
 
-interface IRadioProps extends HTMLAttributes<HTMLDivElement> {
+interface ICheckBoxProps extends HTMLAttributes<HTMLDivElement> {
   selected?: boolean;
   disabled?: boolean;
   label?: string;
   labelSize?: TFontSize;
 }
 
-const Radio: FunctionComponent<IRadioProps> = (props) => {
+const CheckBox: FunctionComponent<ICheckBoxProps> = (props) => {
   const { label, labelSize, selected, disabled, ...restProps } = props;
 
   return (
-    <RadioElement selected={selected} disabled={disabled} {...restProps}>
-      <Button selected={selected} disabled={disabled} />
+    <CheckBoxElement selected={selected} disabled={disabled} {...restProps}>
+      <Button selected={selected} disabled={disabled}>
+        <Icon
+          size={20}
+          icon="miniCheck"
+          color={selected ? EColors.white : EColors.transparent}
+        />
+      </Button>
       {label && (
         <Text variant="body3" className="label">
           {label}
         </Text>
       )}
-    </RadioElement>
+    </CheckBoxElement>
   );
 };
 
-const Button = styled.button<IRadioProps>`
+const Button = styled.button<ICheckBoxProps>`
   width: 20px;
   height: 20px;
-  border-radius: 50%;
-  position: relative;
+  border-radius: 4px;
   box-shadow: 0 0 0 1.5px inset ${EColors.black_60};
   transition: 100ms ease-out;
   cursor: ${(props) => (props.disabled ? `not-allowed` : `pointer`)};
-
-  ::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: ${EColors.blue_80};
-    opacity: 0;
-  }
 
   ${(props) =>
     props.selected &&
     `
       box-shadow: 0 0 0 1px inset ${EColors.blue_80}!important;
-      ::after {
-        width: 12px;
-        height: 12px;
-        opacity: 1;
-      }
+      background: ${EColors.blue_80};
     `};
 
   ${(props) =>
@@ -67,7 +56,7 @@ const Button = styled.button<IRadioProps>`
     `};
 `;
 
-const RadioElement = styled.div<IRadioProps>`
+const CheckBoxElement = styled.div<ICheckBoxProps>`
   display: inline-flex;
   align-items: center;
   column-gap: 6px;
@@ -90,4 +79,5 @@ const RadioElement = styled.div<IRadioProps>`
       `};
   }
 `;
-export default Radio;
+
+export default CheckBox;
