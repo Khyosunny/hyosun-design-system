@@ -23,7 +23,10 @@ export const Size = () => (
 
 export const Disabled = () => (
   <div style={{ maxWidth: 300 }}>
-    <Input disabled placeholder="placeholder" />
+    <Input disabled placeholder="비활성화" inputSize="xl" />
+    <Input disabled placeholder="비활성화" inputSize="lg" />
+    <Input disabled placeholder="비활성화" inputSize="md" />
+    <Input disabled placeholder="비활성화" inputSize="sm" />
   </div>
 );
 
