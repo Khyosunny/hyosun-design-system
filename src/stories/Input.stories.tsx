@@ -41,6 +41,9 @@ export const Error = () => (
 
 export const PasswordInput = () => (
   <div style={{ maxWidth: 300 }}>
-    <Input password placeholder="password" />
+    <Input password placeholder="password" inputSize="xl" />
+    <Input password placeholder="password" inputSize="lg" />
+    <Input password placeholder="password" inputSize="md" />
+    <Input password placeholder="password" inputSize="sm" />
   </div>
 );

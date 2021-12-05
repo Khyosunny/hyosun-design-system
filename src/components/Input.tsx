@@ -79,7 +79,10 @@ const Input = forwardRef<IInputRef, IInputProps>((props, ref) => {
           {...restProps}
         />
         {password && (
-          <button onClick={() => setVisiblePw(!visiblePw)}>
+          <button
+            onClick={() => setVisiblePw(!visiblePw)}
+            className="password_button"
+          >
             <Icon
               icon={visiblePw ? 'visibility' : 'visibilityOff'}
               color={EColors.black_80}
@@ -130,6 +133,16 @@ const Inner = styled.div<IInputProps>`
       border-radius: 8px;
       height: 40px;
       padding: 0 12px;
+
+      .password_button {
+        width: 22px;
+        height: 22px;
+        
+        svg {
+          width: 22px;
+          height: 22px;
+        }
+      }
     `};
 
   ${(props) =>
@@ -138,6 +151,16 @@ const Inner = styled.div<IInputProps>`
       border-radius: 8px;
       height: 36px;
       padding: 0 10px;
+
+      .password_button {
+        width: 20px;
+        height: 20px;
+
+        svg {
+          width: 20px;
+          height: 20px;
+        }
+      }
     `};
 
   ${(props) =>
@@ -146,6 +169,16 @@ const Inner = styled.div<IInputProps>`
       border-radius: 6px;
       height: 28px;
       padding: 0 8px;
+
+      .password_button {
+        width: 16px;
+        height: 16px;
+
+        svg {
+          width: 16px;
+          height: 16px;
+        }
+      }
     `};
 
   :focus-within {
