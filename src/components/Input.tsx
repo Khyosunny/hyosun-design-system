@@ -7,7 +7,7 @@ import {
 } from 'react';
 import styled from '@emotion/styled';
 import { TFontSize, TInputSize } from '..';
-import { EColors } from '../styles';
+import { EColors, EFontSizes } from '../styles';
 import Text from './Text';
 import Icon from './Icon/Icon';
 
@@ -60,9 +60,11 @@ const Input = forwardRef<IInputRef, IInputProps>((props, ref) => {
   });
 
   return (
-    <Container>
+    <Container inputSize={inputSize} error={error}>
       <Inner
         inputSize={inputSize}
+        disabled={disabled}
+        error={error}
         onClick={() => {
           if (inputRef.current) inputRef.current.focus();
         }}
@@ -71,6 +73,9 @@ const Input = forwardRef<IInputRef, IInputProps>((props, ref) => {
           ref={inputRef}
           type={password ? (visiblePw ? props.type : 'password') : props.type}
           autoComplete={autoComplete}
+          disabled={disabled}
+          inputSize={inputSize}
+          error={error}
           {...restProps}
         />
         {password && (
@@ -82,19 +87,34 @@ const Input = forwardRef<IInputRef, IInputProps>((props, ref) => {
           </button>
         )}
       </Inner>
+      {errorMessage && (
+        <Text
+          textColor={EColors.red_60}
+          className="error_message"
+          variant="body4"
+        >
+          {errorMessage}
+        </Text>
+      )}
     </Container>
   );
 });
 
-const Container = styled.div`
+const Container = styled.div<IInputProps>`
   position: relative;
   width: 100%;
+  margin-bottom: ${(props) => (props.error ? '24px' : 0)};
+
+  .error_message {
+    position: absolute;
+  }
 `;
 const Inner = styled.div<IInputProps>`
   width: 100%;
   display: flex;
   align-items: center;
   border: 1px solid ${EColors.black_60};
+  transition: all 200ms ease-out;
 
   ${(props) =>
     props.inputSize === 'xl' &&
@@ -131,13 +151,70 @@ const Inner = styled.div<IInputProps>`
   :focus-within {
     border: 1px solid ${EColors.blue_80};
   }
+
+  :hover {
+    border: 1px solid ${EColors.blue_80};
+  }
+
+  ${(props) =>
+    props.disabled &&
+    `
+      border: 1px solid ${EColors.black_40}!important;
+      background: ${EColors.gray_60};
+      cursor: not-allowed;
+    `};
+
+  ${(props) =>
+    props.error &&
+    `
+      border: 1px solid ${EColors.red_60}!important;
+    `};
 `;
 
-const InputElement = styled.input`
+const InputElement = styled.input<IInputProps>`
   width: 100%;
   height: 100%;
   background-color: transparent;
   color: ${EColors.black_100};
+  cursor: text;
+
+  ${(props) =>
+    props.inputSize === 'xl' &&
+    `
+      font-size: ${EFontSizes.body2};
+    `};
+
+  ${(props) =>
+    props.inputSize === 'lg' &&
+    `
+      font-size: ${EFontSizes.body2};
+    `};
+
+  ${(props) =>
+    props.inputSize === 'md' &&
+    `
+      font-size: ${EFontSizes.body3};
+    `};
+
+  ${(props) =>
+    props.inputSize === 'sm' &&
+    `
+      font-size: ${EFontSizes.body4};
+    `};
+
+  ::placeholder {
+    color: ${EColors.black_60};
+  }
+
+  ${(props) =>
+    props.disabled &&
+    `
+        cursor: not-allowed;
+
+        ::placeholder {
+          color: ${EColors.gray_100};
+        }
+    `};
 `;
 
 export default Input;
