@@ -4,6 +4,7 @@ import {
   forwardRef,
   InputHTMLAttributes,
   useState,
+  useEffect,
 } from 'react';
 import styled from '@emotion/styled';
 import { TFontSize, TInputSize } from '..';
@@ -58,6 +59,15 @@ const Input = forwardRef<IInputRef, IInputProps>((props, ref) => {
       },
     };
   });
+
+  useEffect(() => {
+    if (inputRef.current) {
+      inputRef.current.setSelectionRange(
+        inputRef.current.value.length,
+        inputRef.current.value.length
+      );
+    }
+  }, [visiblePw]);
 
   return (
     <Container inputSize={inputSize} error={error}>
