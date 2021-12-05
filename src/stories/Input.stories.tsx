@@ -32,30 +32,10 @@ export const Disabled = () => (
 
 export const Error = () => (
   <div style={{ maxWidth: 300 }}>
-    <Input
-      error
-      placeholder="placeholder"
-      errorMessage="올바른 형식이 아닙니다."
-      inputSize="xl"
-    />
-    <Input
-      error
-      placeholder="placeholder"
-      errorMessage="올바른 형식이 아닙니다."
-      inputSize="lg"
-    />
-    <Input
-      error
-      placeholder="placeholder"
-      errorMessage="올바른 형식이 아닙니다."
-      inputSize="md"
-    />
-    <Input
-      error
-      placeholder="placeholder"
-      errorMessage="올바른 형식이 아닙니다."
-      inputSize="sm"
-    />
+    <Input error errorMessage="올바른 형식이 아닙니다." inputSize="xl" />
+    <Input error errorMessage="올바른 형식이 아닙니다." inputSize="lg" />
+    <Input error errorMessage="올바른 형식이 아닙니다." inputSize="md" />
+    <Input error errorMessage="올바른 형식이 아닙니다." inputSize="sm" />
   </div>
 );
 
