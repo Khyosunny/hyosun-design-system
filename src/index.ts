@@ -15,3 +15,4 @@ export type TFontSize =
   | 'body3'
   | 'body4';
 export type TFontWeight = 'light' | 'regular' | 'medium' | 'bold';
+export type TInputSize = 'sm' | 'md' | 'lg' | 'xl';

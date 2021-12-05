@@ -133,6 +133,9 @@ const GlobalStyle = () => (
         font: inherit;
         color: inherit;
       }
+      input {
+        outline: none;
+      }
     `}
   />
 );
