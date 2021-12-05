@@ -39,6 +39,38 @@ export const Error = () => (
   </div>
 );
 
+export const WithIcon = () => (
+  <div style={{ maxWidth: 300 }}>
+    <Input placeholder="placeholder" inputSize="xl" icon={{ left: 'search' }} />
+    <Input placeholder="placeholder" inputSize="lg" icon={{ left: 'search' }} />
+    <Input placeholder="placeholder" inputSize="md" icon={{ left: 'search' }} />
+    <Input placeholder="placeholder" inputSize="sm" icon={{ left: 'search' }} />
+    <br />
+    <hr />
+    <br />
+    <Input
+      placeholder="placeholder"
+      inputSize="xl"
+      icon={{ right: 'search' }}
+    />
+    <Input
+      placeholder="placeholder"
+      inputSize="lg"
+      icon={{ right: 'search' }}
+    />
+    <Input
+      placeholder="placeholder"
+      inputSize="md"
+      icon={{ right: 'search' }}
+    />
+    <Input
+      placeholder="placeholder"
+      inputSize="sm"
+      icon={{ right: 'search' }}
+    />
+  </div>
+);
+
 export const PasswordInput = () => (
   <div style={{ maxWidth: 300 }}>
     <Input password placeholder="password" inputSize="xl" />

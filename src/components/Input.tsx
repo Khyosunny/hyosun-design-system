@@ -11,6 +11,7 @@ import { TFontSize, TInputSize } from '..';
 import { EColors, EFontSizes } from '../styles';
 import Text from './Text';
 import Icon from './Icon/Icon';
+import { icons } from './Icon/Icons';
 
 export interface IInputProps extends InputHTMLAttributes<HTMLInputElement> {
   inputSize?: TInputSize;
@@ -18,8 +19,8 @@ export interface IInputProps extends InputHTMLAttributes<HTMLInputElement> {
   error?: boolean;
   errorMessage?: string;
   icon?: {
-    left?: React.ReactElement;
-    right?: React.ReactElement;
+    left?: keyof typeof icons;
+    right?: keyof typeof icons;
   };
 }
 
@@ -32,6 +33,7 @@ export interface IInputRef {
 
 const Input = forwardRef<IInputRef, IInputProps>((props, ref) => {
   const {
+    icon,
     inputSize = 'lg',
     error,
     errorMessage,
@@ -70,7 +72,7 @@ const Input = forwardRef<IInputRef, IInputProps>((props, ref) => {
   }, [visiblePw]);
 
   return (
-    <Container inputSize={inputSize} error={error}>
+    <Container inputSize={inputSize} errorMessage={errorMessage}>
       <Inner
         inputSize={inputSize}
         disabled={disabled}
@@ -79,6 +81,7 @@ const Input = forwardRef<IInputRef, IInputProps>((props, ref) => {
           if (inputRef.current) inputRef.current.focus();
         }}
       >
+        {icon?.left && <Icon icon={icon.left} color={EColors.black_80} />}
         <InputElement
           ref={inputRef}
           type={password ? (visiblePw ? props.type : 'password') : props.type}
@@ -86,6 +89,7 @@ const Input = forwardRef<IInputRef, IInputProps>((props, ref) => {
           disabled={disabled}
           inputSize={inputSize}
           error={error}
+          icon={icon}
           {...restProps}
         />
         {password && (
@@ -99,6 +103,7 @@ const Input = forwardRef<IInputRef, IInputProps>((props, ref) => {
             />
           </button>
         )}
+        {icon?.right && <Icon icon={icon.right} color={EColors.black_80} />}
       </Inner>
       {errorMessage && (
         <Text
@@ -116,7 +121,7 @@ const Input = forwardRef<IInputRef, IInputProps>((props, ref) => {
 const Container = styled.div<IInputProps>`
   position: relative;
   width: 100%;
-  margin-bottom: ${(props) => (props.error ? '24px' : 0)};
+  margin-bottom: ${(props) => (props.errorMessage ? '24px' : 0)};
 
   .error_message {
     position: absolute;
@@ -147,12 +152,12 @@ const Inner = styled.div<IInputProps>`
       .password_button {
         width: 22px;
         height: 22px;
-        
-        svg {
+      }
+              
+      svg {
           width: 22px;
           height: 22px;
         }
-      }
     `};
 
   ${(props) =>
@@ -165,12 +170,12 @@ const Inner = styled.div<IInputProps>`
       .password_button {
         width: 20px;
         height: 20px;
+      }
 
-        svg {
+      svg {
           width: 20px;
           height: 20px;
         }
-      }
     `};
 
   ${(props) =>
@@ -183,12 +188,12 @@ const Inner = styled.div<IInputProps>`
       .password_button {
         width: 16px;
         height: 16px;
+      }
 
-        svg {
+      svg {
           width: 16px;
           height: 16px;
         }
-      }
     `};
 
   :focus-within {
@@ -225,24 +230,32 @@ const InputElement = styled.input<IInputProps>`
     props.inputSize === 'xl' &&
     `
       font-size: ${EFontSizes.body2};
+      padding-left: ${props.icon?.left ? '8px' : '0'};
+      padding-right: ${props.icon?.right ? '8px' : '0'};
     `};
 
   ${(props) =>
     props.inputSize === 'lg' &&
     `
       font-size: ${EFontSizes.body2};
+      padding-left: ${props.icon?.left ? '8px' : '0'};
+      padding-right: ${props.icon?.right ? '8px' : '0'};
     `};
 
   ${(props) =>
     props.inputSize === 'md' &&
     `
       font-size: ${EFontSizes.body3};
+      padding-left: ${props.icon?.left ? '6px' : '0'};
+      padding-right: ${props.icon?.right ? '6px' : '0'};
     `};
 
   ${(props) =>
     props.inputSize === 'sm' &&
     `
       font-size: ${EFontSizes.body4};
+      padding-left: ${props.icon?.left ? '4px' : '0'};
+      padding-right: ${props.icon?.right ? '4px' : '0'};
     `};
 
   ::placeholder {
