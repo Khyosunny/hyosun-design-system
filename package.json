@@ -4,9 +4,14 @@
   "description": "",
   "main": "build/index.js",
   "module": "build/index.es.js",
+  "types": "build/index.d.ts",
+  "files": [
+    "build"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rollup -c",
+    "build:types": "tsc --emitDeclarationOnly",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
