@@ -5,7 +5,7 @@ import { EColors } from '../styles';
 import Icon from './Icon/Icon';
 import Text from './Text';
 
-interface ICheckBoxProps extends HTMLAttributes<HTMLDivElement> {
+export interface ICheckBoxProps extends HTMLAttributes<HTMLDivElement> {
   selected?: boolean;
   disabled?: boolean;
   label?: string;

@@ -4,7 +4,7 @@ import { TFontSize } from '..';
 import { EColors } from '../styles';
 import Text from './Text';
 
-interface IRadioProps extends HTMLAttributes<HTMLDivElement> {
+export interface IRadioProps extends HTMLAttributes<HTMLDivElement> {
   selected?: boolean;
   disabled?: boolean;
   label?: string;

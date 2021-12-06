@@ -2,7 +2,7 @@ import { FunctionComponent } from 'react';
 import styled from '@emotion/styled';
 import { EColors, EFontSizes } from '../styles';
 
-interface ITagProps {
+export interface ITagProps {
   label?: string;
   color?: 'green' | 'red';
 }

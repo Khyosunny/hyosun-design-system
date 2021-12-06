@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import { icons } from './Icons';
 import { EColors } from '../../styles';
 
-interface IIconProps {
+export interface IIconProps {
   icon: keyof typeof icons;
   size?: number;
   color?: EColors;
