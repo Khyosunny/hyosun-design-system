@@ -7,7 +7,7 @@ import {
   useEffect,
 } from 'react';
 import styled from '@emotion/styled';
-import { TFontSize, TInputSize } from '..';
+import { TInputSize } from '..';
 import { EColors, EFontSizes } from '../styles';
 import Text from './Text';
 import Icon from './Icon/Icon';
