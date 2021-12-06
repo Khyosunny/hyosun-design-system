@@ -1,5 +1,5 @@
 export { default as Global } from './GlobalStyle';
-export { default as Button } from './components/Button';
+export * from './components';
 
 export type TButtonSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 export type TButtonVariant = 'default' | 'outlined';
