@@ -8,17 +8,22 @@ export default {
   input: 'src/index.ts',
   output: [
     {
-      file: pkg.module, // 번들링한 파일을 저장 할 경로
-      format: 'esm', // ES Module 형태로 번들링함
+      file: pkg.main,
+      format: 'cjs',
+      sourcemap: true,
+    },
+    {
+      file: pkg.module,
+      format: 'esm',
       sourcemap: true,
     },
   ],
   plugins: [
     peerDepsExternal(),
     resolve(),
-    typescript({ useTsconfigDeclarationDir: true }),
     commonjs({
       include: 'node_modules/**',
     }),
+    typescript({ useTsconfigDeclarationDir: true }),
   ],
 };
