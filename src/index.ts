@@ -6,8 +6,8 @@ export { default as Input } from './components/Input';
 export { default as Radio } from './components/Radio';
 export { default as Tag } from './components/Tag';
 export { default as Text } from './components/Text';
-import * as icons from './components/Icon/Icons';
-export { icons };
+export * from './components/Icon/Icons';
+export * from './styles';
 
 export type TButtonSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 export type TButtonVariant = 'default' | 'outlined';
