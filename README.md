@@ -32,6 +32,7 @@ yarn add hyosun-design-system
 - Global Style
 - Button
 - Icon
+- Input
 - CheckBox
 - Radio
 - Tag
