@@ -15,9 +15,13 @@ jobs:
     # the list of steps that the action will go through
     steps:
       - uses: actions/checkout@v1
-      - run: yarn
+      - run: |
+        yarn
+      - run: |
+        yarn build-storybook
+      
       - uses: chromaui/action@v1
         # options required to the GitHub chromatic action
         with:
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-          token: ${{ secrets.HYO_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
