@@ -12,7 +12,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc --emitDeclarationOnly & rollup -c",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "chromatic": "npx chromatic --project-token=7943c21941cf"
   },
   "keywords": [],
   "author": "",
@@ -28,6 +29,7 @@
     "@storybook/react": "^6.4.8",
     "babel-loader": "^8.2.3",
     "babel-preset-react-app": "^10.0.0",
+    "chromatic": "^6.2.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "rollup": "^2.60.2",

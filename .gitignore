@@ -1,5 +1,5 @@
 node_modules/
 build/
-build_story/
+storybook-static/
 yarn-error.log
-debug.log
+build-storybook.log
