@@ -3,7 +3,9 @@
 # name of our action
 name: 'Chromatic'
 # the event that will trigger the action
-on: push
+on:
+  push:
+    branches: [master]
 
 # what the action will do
 jobs:
