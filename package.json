@@ -12,8 +12,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc --emitDeclarationOnly & rollup -c",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
-    "chromatic": "npx chromatic --project-token=7943c21941cf"
+    "build-storybook": "build-storybook"
   },
   "keywords": [],
   "author": "",
