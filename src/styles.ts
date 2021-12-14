@@ -17,7 +17,7 @@ export enum EColors {
   gray_80 = '#EBEBEB',
   gray_60 = '#F5F5F5',
   gray_40 = '#FBFBFB',
-  white = '#fff',
+  white = '#FFFFFF',
 
   red_100 = '#A70000',
   red_80 = '#D11111',
