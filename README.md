@@ -1,17 +1,17 @@
 # Hyosun Design System
 
-### 개인 프로젝트를 진행하기 위해 만드는 디자인 시스템
+### Storybook Design System
 
-피그마로 디자인 선행 작업 진행 후,
-Emotion + Storybook 으로 디자인 시스템을 구축합니다.
+- Figma
+- Emotion
+- Rollup.js
 
-rollup.js로 번들 작업 후 npm 라이브러리 배포 완료
-
-https://www.npmjs.com/package/hyosun-design-system
-
+storybook 으로 디자인 시스템 구축해보고 싶었고 겸사겸사 개인 프로젝트에서도 사용하면 좋을 것 같아서 만들게 된 프로젝트입니다.
 <br />
 
 ## Install
+
+https://www.npmjs.com/package/hyosun-design-system
 
 ### npm
 
@@ -29,7 +29,7 @@ yarn add hyosun-design-system
 
 ## Component
 
-- Global Style
+- Global Style : css 초기화를 해주는 컴포넌트입니다.
 - Button
 - Icon
 - Input
